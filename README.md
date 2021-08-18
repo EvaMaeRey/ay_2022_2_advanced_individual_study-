@@ -15,6 +15,7 @@ Here, laying out some objectives for independent study, MA489!
     - high influence points
     - cooks distance
   - other ideas:  http://www.rossmanchance.com/ISIapplets.html
+- learning about package development and architecture
 
 ### Providing a *usable* set functions in a package (ggxmean)
 - https://evamaerey.github.io/ggxmean/, https://github.com/EvaMaeRey/ggxmean

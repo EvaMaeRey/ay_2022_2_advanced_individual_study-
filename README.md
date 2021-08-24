@@ -36,7 +36,11 @@ Here, laying out some objectives for independent study, MA489!
 
 # Weeks 1-6:
 
-## ggplo2 background and theory
+## Task 0. Sign up for github account
+
+Try editing this file; maybe fix a typo.  It is version control system so there are some steps. We can do together.  
+
+## Task 1. ggplo2 background and theory
 
 Watch https://www.youtube.com/watch?v=itChfcTx7ao and answer the questions:
 
@@ -53,7 +57,7 @@ Leland Wilkinson identified 7 components of a statistical graphic in his seminal
 
 ggplot2 allow us to manipulate these components in an orthogonal, independnet way.  Separating our decisions with a plus sign, "+".  Which function do you think allows analysts to make decisions about each of the seven components.  See the 'how' column: 	https://evamaerey.github.io/ggplot2_grammar_guide/about
 
-## Practice using ggplot2
+## Task 2. Practice using ggplot2
 
 In R select a dataset by typing `data()` in the R console.  
 
@@ -70,13 +74,13 @@ Sketch out on paper the visualization you'd like to create with the data... What
 Attempt to build your plot.  For each decision, use a new line of code.  Be prepared to talk about your decisions, we'll use the app:  https://sjspielman.shinyapps.io/line_by_line/.
 
 
-## User defined functions in R
+## Task 3. User defined functions in R
 
 Using functions in R lets us lighten our work.  We can bundle up an idea that has several component steps as a single task. 
 
-Take a simple example:  finding the mean.  
+Take a simple example -- finding the mean.  
 
-We can do this:
+We can do this as follows:
 
 ``` r
 sum(1:10)/length(1:10)
@@ -85,8 +89,50 @@ sum(c(2,3,6))/length(c(2,3,6))
 
 And it is good to do this a few times, to make sure we have a clear understanding of taking the mean.  But after a while, we may get tired of the computation.  We are confident of our understanding of the mean.  And other's understanding.  A single function call would be sufficient.  
 
+Here's an example of writing a function:
+
+``` r
+my_mean <- function(x){
+
+sum(x)/length(x)
+
+}
+```
+
+Now **watch** this introduction to writing functions in R:  https://www.youtube.com/watch?v=u-gSj9J2wRA&t=31s
+
+**Report one of the functions Roger Peng writes in the tutorial:**
+
+Morgan:
+
 ``` r
 
 
 ```
+
+Madison 
+
+``` r
+
+
+```
+
+
+**Now write two of your own functions.**
+
+Morgan:
+
+``` r
+
+
+```
+
+Madison 
+
+``` r
+
+
+```
+
+## Task 4. Model diognostics
 

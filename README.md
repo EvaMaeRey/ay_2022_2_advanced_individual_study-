@@ -34,9 +34,9 @@ Here, laying out some objectives for independent study, MA489!
 ---
 
 
-Weeks 1-6:
+# Weeks 1-6:
 
-## ggplo2 background
+## ggplo2 background and theory
 
 Watch https://www.youtube.com/watch?v=itChfcTx7ao and answer the questions:
 
@@ -45,17 +45,26 @@ Watch https://www.youtube.com/watch?v=itChfcTx7ao and answer the questions:
 
 Leland Wilkinson identified 7 components of a statistical graphic in his seminal work, *The Grammar of Graphics*.
 
-![text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4P5ANBcXvQ61yA7ElksWqodnd77ZMPsBN7KJ0ALyHq0XYNAqqNVYR4SgmAvJ9PkIfUbg&usqp=CAU)
+![Cover of Wilkinson's 1999 book](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4P5ANBcXvQ61yA7ElksWqodnd77ZMPsBN7KJ0ALyHq0XYNAqqNVYR4SgmAvJ9PkIfUbg&usqp=CAU)
 
 > The Grammar of Graphics, or GOG, denotes a system with seven orthogonal components. By orthogonal, we mean there are seven graphical component sets whose elements are aspects of the general system and that every combination of aspects in the product of all these sets is meaningful. This sense of the word orthogonality, a term used by computer designers to describe a combinatoric system of components or building blocks, is in some sense similar to the orthogonal factorial analysis of variance (ANOVA), where factors have levels and all possible combinations of levels exist in the ANOVA design. If we interpret each combination of features in a GOG system as a point in a network, then the world described by GOG is represented in a seven-dimensional rectangular lattice. - Wilkinson
 
-What are the functions in ggplot2 that allow us to manipulate these components in an orthogonal, independnet way?
+![A visual of the seven orthogonal components](https://miro.medium.com/max/1838/1*MMZuYgeC_YjXNC1r4D4sog.png)
+
+ggplot2 allow us to manipulate these components in an orthogonal, independnet way.  Separating our decisions with a plus sign, "+".  Which function do you think allows analysts to make decisions about each of the seven components.  See the 'how' column: 	https://evamaerey.github.io/ggplot2_grammar_guide/about
 
 ## Practice using ggplot2
 
-In R:
+In R select a dataset by typing `data()` in the R console.  
 
-https://www.jstor.org/stable/pdf/25651297.pdf?casa_token=hCG9IQPamPkAAAAA:gFU2VFRQujXKynq98zLzTUXuLQJzaEHYGhzZnhOZoPPlVB5LBdH-t0-7YtPBPwPePZivLr94EMXDY0pkq7j8VxrGognYIRV9P0yeFe_3YPx71KVmkQf2
+Select one of the *Data sets in package ‘datasets’:*
 
+Learn more about the data by using question mark before the dataset name, for example: `?AirPassengers` in the R console.
+
+Have a look at the data itself, for example type `AirPassengers` and execute in the R console
+
+Sketch out on paper the visualization you'd like to create with the data... What visual aesthetic will represent each variable?
+
+![](https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png)
 
 

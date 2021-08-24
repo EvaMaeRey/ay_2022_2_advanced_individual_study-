@@ -67,4 +67,26 @@ Sketch out on paper the visualization you'd like to create with the data... What
 
 ![](https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png)
 
+Attempt to build your plot.  For each decision, use a new line of code.  Be prepared to talk about your decisions, we'll use the app:  https://sjspielman.shinyapps.io/line_by_line/.
+
+
+## User defined functions in R
+
+Using functions in R lets us lighten our work.  We can bundle up an idea that has several component steps as a single task. 
+
+Take a simple example:  finding the mean.  
+
+We can do this:
+
+``` r
+sum(1:10)/length(1:10)
+sum(c(2,3,6))/length(c(2,3,6))
+```
+
+And it is good to do this a few times, to make sure we have a clear understanding of taking the mean.  But after a while, we may get tired of the computation.  We are confident of our understanding of the mean.  And other's understanding.  A single function call would be sufficient.  
+
+``` r
+
+
+```
 

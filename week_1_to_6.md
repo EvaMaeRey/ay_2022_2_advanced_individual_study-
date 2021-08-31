@@ -128,14 +128,28 @@ Madison
 
 **Now write two of your own functions.**
 
-Morgan:
+Morgan function 1:
 
 ``` r
 
 
 ```
 
-Madison 
+Morgan function 2:
+
+``` r
+
+
+```
+
+Madison function 1:
+
+``` r
+
+
+```
+
+Madison function 2:
 
 ``` r
 

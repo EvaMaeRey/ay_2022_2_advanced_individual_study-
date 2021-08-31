@@ -160,4 +160,4 @@ Madison function 2:
 
 - https://joshualoftus.com/posts/2020-11-23-least-squares-as-springs/
 - https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Lecture/lecture08_2020JC.html#7
-- https://www.stat.berkeley.edu/~spector/s133/Lr1.html
+- https://www.stat.berkeley.edu/~spector/s133/Lr1.html <- we looked at this example, and talked about a function like `geom_point_outliers`

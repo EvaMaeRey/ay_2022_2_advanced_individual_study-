@@ -21,7 +21,7 @@ Leland Wilkinson identified 7 components of a statistical graphic in his seminal
 
 ![A visual of the seven orthogonal components](https://miro.medium.com/max/1838/1*MMZuYgeC_YjXNC1r4D4sog.png)
 
-ggplot2 allow us to manipulate these components in an orthogonal, independnet way.  Separating our decisions with a plus sign, "+".  Which function do you think allows analysts to make decisions about each of the seven components.  See the 'how' column: 	https://evamaerey.github.io/ggplot2_grammar_guide/about
+ggplot2 allow us to manipulate these components in an orthogonal, independent way.  Separating our decisions with a plus sign, "+".  Which function do you think allows analysts to make decisions about each of the seven components.  See the 'how' column: 	https://evamaerey.github.io/ggplot2_grammar_guide/about
 
 ## Task 2. Practice using ggplot2
 

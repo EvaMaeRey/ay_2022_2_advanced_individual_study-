@@ -10,7 +10,7 @@ Try editing this file; maybe fix a typo.  It is version control system so there 
 
 ## Task 1. ggplot2 background and theory
 
-Watch https://www.youtube.com/watch?v=itChfcTx7ao and **answer the questions** (send to me in an email):
+Watch https://www.youtube.com/watch?v=itChfcTx7ao and **answer the questions, task 1.a** (send to me in an email):
 
 - According to Meeks, what are halmarks of each of the three modern waves of data visualization?
 - Wave does he think the grammar of graphics fits into?
@@ -23,7 +23,9 @@ Leland Wilkinson identified 7 components of a statistical graphic in his seminal
 
 ![A visual of the seven orthogonal components](https://miro.medium.com/max/1838/1*MMZuYgeC_YjXNC1r4D4sog.png)
 
-ggplot2 allow us to manipulate these components in an orthogonal, independnet way.  Separating our decisions with a plus sign, "+".  **Answer the question - send in an email**: 
+ggplot2 allow us to manipulate these components in an orthogonal, independnet way.  Separating our decisions with a plus sign, "+".  
+
+**Answer the question - send in an email, task 1.b**: 
 
 *Which ggplot2 function do you think allows analysts to make decisions about each of the seven components?*  See the 'how' column: 	https://evamaerey.github.io/ggplot2_grammar_guide/about
 

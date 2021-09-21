@@ -88,8 +88,6 @@ ggplot(ChickWeight) +
 Madison plot 3:
 
 ``` r
-us_rent_income%>%
-ggplot(aes(x = NAME, y = estimate, color = variable)) + geom_point()
 ```
 
 ## Task 3. User defined functions in R

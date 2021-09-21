@@ -67,19 +67,29 @@ Morgan plot 3:
 Madison plot 1:
 
 ``` r
+ggplot(Orange) +
+  aes(x = age, y = circumference) +
+  geom_point() +
+  xlab("Age") +
+  ylab("Circumference")
 
 ```
 
 Madison plot 2:
 
 ``` r
-
+ggplot(ChickWeight) + 
+  aes(x = Time, y = weight, color = Diet) + 
+  geom_point() + 
+  xlab("Time") + 
+  ylab("Chick Weight")
 ```
 
 Madison plot 3:
 
 ``` r
-
+us_rent_income%>%
+ggplot(aes(x = NAME, y = estimate, color = variable)) + geom_point()
 ```
 
 ## Task 3. User defined functions in R

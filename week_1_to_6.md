@@ -154,9 +154,17 @@ greaterNum<- function(x,y)
 ```
 
 Morgan function 2:
+(this function has an error in it)
 
 ``` r
-
+isMyBirthday <- function(day,month)
+{
+  if(day==12, month==7){
+    ans<- "It is my birthday!"
+  } else{ 
+    ans<-"It is not my birthday"}
+  ans
+}
 
 ```
 

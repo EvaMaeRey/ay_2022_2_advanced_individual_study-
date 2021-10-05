@@ -142,7 +142,14 @@ Madison
 Morgan function 1:
 
 ``` r
-
+greaterNum<- function(x,y)
+{
+  if(x>y){
+    x
+  } else{
+    y
+  }
+}
 
 ```
 

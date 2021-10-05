@@ -132,7 +132,9 @@ above <- function(x,n = 10)
 Madison 
 
 ``` r
-
+add2 <- function(x,y){
+  x + y
+}
 
 ```
 
@@ -171,14 +173,27 @@ isMyBirthday <- function(day,month)
 Madison function 1:
 
 ``` r
-
+add_list <- function(list){
+  sum = 0 
+  for(value in list){
+    sum = sum + value
+  }
+  print(sum)
+}
 
 ```
 
 Madison function 2:
 
 ``` r
-
+is_even <- function(x){
+  if(x%%2 == 0){
+    print('This number is even')
+  }
+  else{
+    print('This number is odd')
+  }
+}
 
 ```
 

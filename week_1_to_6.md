@@ -121,8 +121,11 @@ Now **watch** this introduction to writing functions in R:  https://www.youtube.
 
 Morgan:
 
-``` r
-
+``` above <- function(x,n = 10)
+    {
+       use<- x>n
+       x[use]
+    }
 
 ```
 

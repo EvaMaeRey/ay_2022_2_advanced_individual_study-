@@ -125,7 +125,7 @@ Morgan:
 above <- function(x,n = 10)
 {
     use<- x>n
-    x[use]
+    use
 }
 ```
 
@@ -161,7 +161,7 @@ Morgan function 2:
 ``` r
 isMyBirthday <- function(day,month)
 {
-  if(day==12, month==7){
+  if(day==12 && month==7){
     ans<- "It is my birthday!"
   } else{ 
     ans<-"It is not my birthday"}

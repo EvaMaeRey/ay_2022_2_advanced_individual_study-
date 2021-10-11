@@ -216,5 +216,12 @@ wine
 plot(wine$Proline,wine$Alcohol,col=ifelse(cooks > quantile(wine$cooks,.90),'red','black'))
 plot(wine$Proline,wine$Alcohol,col=ifelse(hat > quantile(wine$hat,.90),'blue','black'))
  
+ ggplot(data = wine) + 
+  aes(x = Proline) + 
+  aes(y = Alcohol) + 
+  geom_point() + # this point layer all data default color black
+  geom_point(data = wine %>% # this next point layer
+               filter(Proline > 1000), # subset of data
+             color = "green") # custom color
 
 ```

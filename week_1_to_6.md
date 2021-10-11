@@ -207,4 +207,13 @@ is_even <- function(x){
 ``` r
 library(tidyverse)
 wine <- read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
+
+simple.lm = lm(Alcohol~Proline,data=wine)
+cooks = cooks.distance(simple.lm)
+hat =  lm.influence(simple.lm)$hat
+par(mfrow=c(2,1))
+plot(wine$Proline,wine$Alcohol,col=ifelse(cooks > quantile(cooks,.90),'red','black'))
+plot(wine$Proline,wine$Alcohol,col=ifelse(hat > quantile(hat,.90),'blue','black'))
+ 
+
 ```

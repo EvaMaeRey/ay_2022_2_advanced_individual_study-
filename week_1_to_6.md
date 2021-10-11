@@ -202,3 +202,9 @@ is_even <- function(x){
 - https://joshualoftus.com/posts/2020-11-23-least-squares-as-springs/
 - https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Lecture/lecture08_2020JC.html#7
 - https://www.stat.berkeley.edu/~spector/s133/Lr1.html <- we looked at this example, and talked about a function like `geom_point_outliers`
+
+
+``` r
+library(tidyverse)
+wine <- read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
+```

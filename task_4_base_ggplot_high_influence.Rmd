@@ -1,0 +1,129 @@
+---
+title: "Highlighting high influence observations in ggplot2"
+author: "Individual Study"
+date: "10/12/2021"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+```
+
+The next task is to use 'base ggplot' to show high influence observations.
+
+Below, you will see two plots produced with 'base R graphics'.  These are from - https://www.stat.berkeley.edu/~spector/s133/Lr1.html 
+
+You will reproduce with ggplot2.
+
+## First we read in data, and limit to variables of interest, Alcohol and Proline.
+
+```{r}
+library(tidyverse)
+wine_raw <- read_csv("https://gist.githubusercontent.com/tijptjik/9408623/raw/b237fa5848349a14a14e5d4107dc7897c21951f5/wine.csv")
+
+head(wine_raw)
+
+wine_raw %>% 
+  select(Alcohol, Proline) ->
+wine
+
+head(wine)
+
+```
+
+
+## Then we estimate a linear model (ols).
+
+```{r}
+# estimate a linear model and assign to simple.lm
+# we will only be looking at simple lm (one predictor) for the independent study
+simple.lm <- lm(formula = Alcohol ~ Proline,
+                data = wine_raw)
+```
+
+## Once estimated, we can get a vector of cooks distances and leverage values for each observation.  We add these to the data frame.
+
+```{r}
+# save cooks distance for each observation using $ notation
+# Cook, R. Dennis (February 1977). "Detection of Influential Observations in Linear Regression". Technometrics. American Statistical Association. 19 (1): 15–18. doi:10.2307/1268249. JSTOR 1268249. MR 0436478.
+# https://en.wikipedia.org/wiki/Cook%27s_distance
+# as another variable in the wine data frame
+wine$cooks <- cooks.distance(model = simple.lm)
+
+# save 'hat' calculation (leverage I think - we'll have to come back to exact calculation)
+# as another variable inthe wine data frame
+wine$hat <-  lm.influence(model = simple.lm)$hat
+wine
+```
+
+## What follows are the examples from https://www.stat.berkeley.edu/~spector/s133/Lr1.html which build plots using base r graphics.
+
+### Note: looking just at the code `wine$cooks > quantile(wine$cooks, .90)` might be helpful.  What does `quantile(wine$cooks, .90)` return?  And the inequality?
+
+```{r}
+# base R plot highlighting 10% highest cooks
+plot(x = wine$Proline, y = wine$Alcohol,
+     col = ifelse(test = wine$cooks >
+                    quantile(wine$cooks, .90),
+                  yes = 'red',
+                  no = 'black'))
+
+# base R plot highlighting 10% highest leverage (hat)
+plot(x = wine$Proline,
+     y = wine$Alcohol,
+     col=ifelse(wine$hat > quantile(wine$hat,.90),
+                'blue','black'))
+```
+
+## Now, with ggplot2, we'll use two point layers to build very similar plots
+
+- First, plot all the observations. 
+- Then, plot 10% of observations with largest cook's (or largest hat) in highlight color.
+
+### Need a hint?  Below, the second point layer highlights a subset of points.
+
+### Note: in base R we refer to variables w/ dollar sign notation, but in tidyverse/ggplot2, you can use variable names directly (i.e. Proline instead of wine$Proline)
+
+```{r}
+# An example of defining subset of data for a point layer
+ggplot(data = wine) + 
+  aes(x = Proline) + 
+  aes(y = Alcohol) + 
+  geom_point() + # this point layer ALL data default color black
+  geom_point(data = wine %>% # this next point layer
+               filter(Proline > 500), # SUBSET of data
+             color = "green") # custom color
+```
+
+# Task 4.2
+
+Now, Instead of highlighting a subset, label each point with cooks distance.  (hint - you can use the geom_text()).
+
+Here is an example of where the observations are labeled with the Alcohol level. 
+
+What does nudge_y do? What does check_overlap do?
+
+```{r}
+ggplot(data = wine) + 
+  aes(x = Proline) + 
+  aes(y = Alcohol) + 
+  geom_point(color = "darkgrey") + 
+  aes(label = round(Alcohol, 1)) +
+  geom_text(nudge_y = .1, 
+            check_overlap = T)
+```
+
+
+Right now we aren't writing any new functions, rather just using ggplot2 'out-of-the-box'.  
+
+
+
+## Task 4. Model diognostics (maybe a bit more together)...
+
+- https://joshualoftus.com/posts/2020-11-23-least-squares-as-springs/
+- https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Lecture/lecture08_2020JC.html#7
+
+
+
+
